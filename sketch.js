@@ -9,12 +9,13 @@ function draw() {
   noStroke();
   randomSeed(1010);
 
-  for (let x = eDiam; x < width; x += random(30, 50)) {
-    for (let y = eDiam; y < height; y += random(30, 50)) {
+  for (let x = eDiam; x < width; x += random(10, 60)) {
+    for (let y = eDiam; y < height; y += random(10, 60)) {
       fill('red');
       let size = eDiam + random(-10, 10);
       let randomX = random(eDiam, width - eDiam);
-      ellipse(randomX, y, size, size);
+      let randomY = random(eDiam, height - eDiam);
+      ellipse(randomX, randomY, size, size);
     }
   }
 }
